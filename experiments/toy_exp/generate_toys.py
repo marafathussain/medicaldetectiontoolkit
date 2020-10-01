@@ -59,8 +59,10 @@ def multi_processing_create_image(inputs):
 
 def generate_experiment(exp_name, n_train_images, n_test_images, mode, class_diameters=(20, 20)):
 
-    train_dir = os.path.join(cf.root_dir, exp_name, 'train')
-    test_dir = os.path.join(cf.root_dir, exp_name, 'test')
+    #train_dir = os.path.join(cf.root_dir, exp_name, 'train')
+    #test_dir = os.path.join(cf.root_dir, exp_name, 'test')
+    train_dir = '/home/marafath/project/marafath/medicaldetectiontoolkit/experiments/toy_exp/train'
+    test_dir = '/home/marafath/project/marafath/medicaldetectiontoolkit/experiments/toy_exp/test'
     if not os.path.exists(train_dir):
         os.makedirs(train_dir)
     if not os.path.exists(test_dir):
@@ -99,9 +101,9 @@ if __name__ == '__main__':
 
     cf = cf.configs()
 
-    generate_experiment('donuts_shape', n_train_images=1500, n_test_images=1000, mode='donuts_shape')
-    generate_experiment('donuts_pattern', n_train_images=1500, n_test_images=1000, mode='donuts_pattern')
-    generate_experiment('circles_scale', n_train_images=1500, n_test_images=1000, mode='circles_scale', class_diameters=(19, 20))
+    generate_experiment('donuts_shape', n_train_images=15, n_test_images=10, mode='donuts_shape')
+    generate_experiment('donuts_pattern', n_train_images=15, n_test_images=10, mode='donuts_pattern')
+    generate_experiment('circles_scale', n_train_images=15, n_test_images=10, mode='circles_scale', class_diameters=(19, 20))
 
 
 
